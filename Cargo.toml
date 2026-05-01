@@ -1,0 +1,21 @@
+[package]
+name = "swtcon"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.71"
+license = "MIT"
+description = "Software TCON for the reMarkable 2 e-paper panel — pure-userspace driver that talks /dev/fb0 directly with no vendor dependencies."
+repository = "https://github.com/yobert/swtcon"
+keywords = ["remarkable", "epaper", "no-std", "embedded", "graphics"]
+categories = ["embedded", "no-std", "hardware-support"]
+
+[lib]
+name = "swtcon"
+
+[features]
+default = ["std"]
+std = []
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+log = "0.4"

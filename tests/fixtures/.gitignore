@@ -1,0 +1,3 @@
+# Vendor panel-firmware files. Pull from your own rM2 to populate:
+#   scp root@remarkable:'/var/lib/uboot/*.wbf' tests/fixtures/
+*.wbf

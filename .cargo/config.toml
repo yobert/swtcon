@@ -1,0 +1,13 @@
+# Cross-compile config for the rM2 (Cortex-A9, armv7-a hard-float, NEON-VFPv3).
+#
+# Linker: AUR `arm-linux-gnueabihf-gcc` cross toolchain.
+# Runner: qemu-arm-static so `cargo test --target armv7-...` runs the test
+# binaries locally without needing a device.
+
+[target.armv7-unknown-linux-gnueabihf]
+linker = "arm-linux-gnueabihf-gcc"
+runner = ["qemu-arm-static", "-L", "/usr/arm-linux-gnueabihf"]
+rustflags = [
+    "-C", "target-cpu=cortex-a9",
+    "-C", "target-feature=+neon,+vfp3",
+]
