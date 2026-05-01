@@ -10,6 +10,15 @@ or any vendor symbols. The library is small, dependency-light (just
 `libc` and `log`), and (hopefully) resilient to firmware updates that change
 the stock UI's user-space components.
 
+## Thanks
+
+https://github.com/timower/rM2-stuff -- Was a huge help with their C++ swtcon implementation.
+https://github.com/rmkit-dev/rmkit -- Where I started with this. But remarkable 2 no longer has rm2fb support unfortunately.
+
+## AI disclaimer
+
+I used claude code heavily for this development.
+
 ## Limitations
 
 It's not as low latency as xiochitl. I'm working on this though.
